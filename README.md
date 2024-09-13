@@ -1,6 +1,6 @@
 # DreamFLEX
 
-This is the repository that contains source code for the [DreamFLEX website](https://faultloco.github.io).
+This is the repository that contains source code for the [DreamFLEX website](https://dreamflex.github.io).
 
 If you find Nerfies useful for your work please cite:
 ```
