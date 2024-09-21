@@ -180,7 +180,6 @@
       </div>
     </div>
   </div>
-
   <div class="container is-max-desktop" style="margin-top: 40px;">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -188,30 +187,126 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent advances in quadrupedal robots have demonstrated impressive agility and the ability to traverse diverse terrains. However, hardware issues, such as motor overheating or joint locking, may occur during long-distance walking or traversing through rough terrains and lead to locomotion failures. Although several studies have proposed fault-tolerant control methods for quadrupedal robots, there are still challenges in traversing unstructured terrains. 
+            Recent advances in quadrupedal robots have demonstrated impressive agility and the ability to traverse diverse terrains. However, hardware issues, such as motor overheating or joint locking, may occur during long-distance walking or traversing through rough terrains leading to locomotion failures. Although several studies have proposed fault-tolerant control methods for quadrupedal robots, there are still challenges in traversing unstructured terrains. 
           </p>
           <p>  
-            In this paper, we propose DreamFLEX, a robust fault-tolerant locomotion controller that enables a quadrupedal robot to traverse complex environments even under joint failure condition. DreamFLEX integrates an explicit failure estimation and modulation network that jointly estimates the robot's joint fault vector and utilizes this information to adapt the locomotion pattern to faulty conditions in real-time, enabling quadrupedal robots to maintain stability and performance in rough terrains. 
-          </p>
-          <p>
-            Experimental results demonstrate that DreamFLEX outperforms existing methods in both simulation and real-world scenarios, effectively managing hardware failures while maintaining robust locomotion performance.
+            In this paper, we propose DreamFLEX, a robust fault-tolerant locomotion controller that enables a quadrupedal robot to traverse complex environments even under joint failure conditions. DreamFLEX integrates an explicit failure estimation and modulation network that jointly estimates the robot's joint fault vector and utilizes this information to adapt the locomotion pattern to faulty conditions in real-time, enabling quadrupedal robots to maintain stability and performance in rough terrains. Experimental results demonstrate that DreamFLEX outperforms existing methods in both simulation and real-world scenarios, effectively managing hardware failures while maintaining robust locomotion performance.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
-
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video (TODO)</h2>
+        <!-- <h2 class="title is-3">Video</h2> -->
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <!-- <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" -->
+          <iframe src="https://www.youtube.com/embed/w21ngs6aL08?si=5qvQDt6AA3dL40f8"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
     <!--/ Paper video. -->
+  </div>
+
+  <div class="container is-max-desktop" style="margin-top: 40px;">
+    <!-- Figure -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Figure</h2> -->
+        <h2 class="title is-3">Overview</h2>
+        <div class="publication-figure">
+          <img src="./static/figure/2_method_overview_final_v1.jpg" alt="DreamFLEX Architecture" style="width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>
+    <!--/ Figure -->
+    <!-- Overview -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            The overall architecture of DreamFLEX. (a) DreamFLEX is trained via deep reinforcement learning with only proprioceptive information based on an asymmetric actor-critic architecture. (b) To deal with abnormal situations for quadrupedal robots, each agent is trained with randomly assigned normal or faulty conditions. (c) Subsequently, a failure estimation and modulation network (FEMNet) estimates the failure vector and leverages it to modulate the latent embedding for the policy network. This framework enables the robot to autonomously estimate its failure joints and leverage this information to traverse various terrains.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Overview -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Experiments</h2>
+
+    <!-- First Row: Grass and Gravel -->
+    <div class="columns is-centered has-text-centered">
+      <!-- Experiment 1: Grass -->
+      <div class="column">
+        <div class="publication-video">
+          <video id="grass-video" controls playsinline style="width: 100%; height: auto;">
+            <source src="./static/videos/matting.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h2 class="title is-5">Grass</h2>
+        <div class="content has-text-justified">
+          <p>
+            As a byproduct of our method, we can also solve the matting problem by ignoring
+            samples that fall outside of a bounding box during rendering.
+          </p>
+        </div>
+      </div>
+
+      <!-- Experiment 2: Gravel -->
+      <div class="column">
+        <div class="publication-video">
+          <video id="gravel-video" controls playsinline style="width: 100%; height: auto;">
+            <source src="./static/videos/matting.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h2 class="title is-5">Gravel</h2>
+        <div class="content has-text-justified">
+          <p>
+            Similar to the grass terrain, our approach helps tackle unstructured gravel surfaces, 
+            ensuring stable locomotion even under challenging conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row: Slope and Another Experiment -->
+    <div class="columns is-centered has-text-centered">
+      <!-- Experiment 3: Slope -->
+      <div class="column">
+        <div class="publication-video">
+          <video id="slope-video" controls playsinline style="width: 100%; height: auto;">
+            <source src="./static/videos/slope.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h2 class="title is-5">Slope</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our method efficiently handles locomotion over steep slopes, providing robust performance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Experiment 4: Another Experiment -->
+      <div class="column">
+        <div class="publication-video">
+          <video id="another-video" controls playsinline style="width: 100%; height: auto;">
+            <source src="./static/videos/another.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h2 class="title is-5">Another Experiment</h2>
+        <div class="content has-text-justified">
+          <p>
+            Another challenging terrain where our method outperforms traditional approaches.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -222,9 +317,8 @@
     <pre><code>@inproceeding{lee2025dreamflex,
       author    = {Lee, Seunghyun and Nahrendra, I Made Aswin and Lee, Dongkyu and Yu, Byeongho and Oh, Minho and Myung, Hyun},
       title     = {{DreamFLEX}: Learning Fault-Aware Quadrupedal Locomotion Controller for Anomaly Situation in Rough Terrains},
-      booktitle = {Proc. IEEE Int. Conf. Robot. Automat.},
       year      = {2025},
-      note      = {{Submitted}} 
+      note      = {{ICRA 2025 Submitted}} 
     }</code></pre>
   </div>
 </section>
