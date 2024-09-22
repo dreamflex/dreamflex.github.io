@@ -102,7 +102,7 @@
               <a href="https://urobot.kaist.ac.kr/url_teams/mr-minho-oh/">Minho Oh</a>,
             </span>
             <span class="author-block">
-              <a href="https://urobot.kaist.ac.kr/url_teams/prof-hyunmyung/">Hyun Myung</a>,
+              <a href="https://urobot.kaist.ac.kr/url_teams/prof-hyunmyung/">Hyun Myung</a>
             </span>
           </div>
 
@@ -171,7 +171,7 @@
       <div class="column is-four-fifths">
         <div class="hero-body" style="padding-top: 0; padding-bottom: 0;">
           <video id="teaser" autoplay muted loop playsinline style="width: 100%; margin-top: 0;">
-            <source src="./static/videos/preview_before.mp4" type="video/mp4">
+            <source src="./static/videos/preview.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
             <strong>Dream</strong> walking for <strong>F</strong>ault-aware <strong>L</strong>ocomotion control using <strong>EX</strong>plicit failure estimation and modulation (<strong>DreamFLEX</strong>)
@@ -242,33 +242,31 @@
     <div class="columns is-centered has-text-centered">
       <!-- Experiment 1: Grass -->
       <div class="column">
+        <h2 class="title is-5">Gravel</h2>
         <div class="publication-video">
-          <video id="grass-video" controls playsinline style="width: 100%; height: auto;">
-            <source src="./static/videos/matting.mp4" type="video/mp4">
-          </video>
+          <iframe src="https://www.youtube.com/embed/v4BInMPG9eo?si=8XfyVQvBwfX3k5k6"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-        <h2 class="title is-5">Grass</h2>
+        <h2 class="title is-5"> </h2>
         <div class="content has-text-justified">
-          <p>
-            As a byproduct of our method, we can also solve the matting problem by ignoring
-            samples that fall outside of a bounding box during rendering.
-          </p>
+          <!-- <p>
+            Rough gravel terrain
+          </p> -->
         </div>
       </div>
 
       <!-- Experiment 2: Gravel -->
       <div class="column">
+        <h2 class="title is-5">Tree Root</h2>
         <div class="publication-video">
-          <video id="gravel-video" controls playsinline style="width: 100%; height: auto;">
-            <source src="./static/videos/matting.mp4" type="video/mp4">
-          </video>
+          <iframe src="https://www.youtube.com/embed/7ol1hmqotRo?si=fyxnyFEDlvvbb-ho"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-        <h2 class="title is-5">Gravel</h2>
+        <h2 class="title is-5"> </h2>
         <div class="content has-text-justified">
-          <p>
-            Similar to the grass terrain, our approach helps tackle unstructured gravel surfaces, 
-            ensuring stable locomotion even under challenging conditions.
-          </p>
+          <!-- <p>
+            Slippery tree root terrain
+          </p> -->
         </div>
       </div>
     </div>
@@ -277,34 +275,94 @@
     <div class="columns is-centered has-text-centered">
       <!-- Experiment 3: Slope -->
       <div class="column">
-        <div class="publication-video">
-          <video id="slope-video" controls playsinline style="width: 100%; height: auto;">
-            <source src="./static/videos/slope.mp4" type="video/mp4">
-          </video>
-        </div>
         <h2 class="title is-5">Slope</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/zBwQyR6cCYo?si=3koB2IYGGCmLdEsg"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <h2 class="title is-5"> </h2>
+        <div class="content has-text-justified">
+          <!-- <p>
+            Slope terrain
+          </p> -->
+        </div>
+      </div>
+
+      <!-- Experiment 3: Slope -->
+      <div class="column">
+        <h2 class="title is-5">Step</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/x9kdl2HPjZY?si=kLi-0dVyqY_d_RUb"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <h2 class="title is-5"> </h2>
+        <div class="content has-text-justified">
+          <!-- <p>
+            Discretized step terrain
+          </p> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row: Slope and Another Experiment -->
+    <div class="columns is-centered has-text-centered">
+      <!-- Experiment 4: Another Experiment -->
+      <div class="column">
+        <h2 class="title is-5">Stair</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/rjBGmxIk0W4?si=Zh7pb94-I0jI0r2D"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <h2 class="title is-5"> </h2>
         <div class="content has-text-justified">
           <p>
-            Our method efficiently handles locomotion over steep slopes, providing robust performance.
+            The stair terrain is quite challenging for small quadrupedal robots even in normal situations. Thanks to the robustness of the policy trained with DreamFLEX, the robot, even with fault joint, could safely walk through stair.
           </p>
         </div>
       </div>
 
       <!-- Experiment 4: Another Experiment -->
       <div class="column">
+        <h2 class="title is-5">Actual Failure</h2>
         <div class="publication-video">
-          <video id="another-video" controls playsinline style="width: 100%; height: auto;">
-            <source src="./static/videos/another.mp4" type="video/mp4">
-          </video>
+          <iframe src="https://www.youtube.com/embed/52bOCMTSBGw?si=dI-PMWAhoWr8Bvd9"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-        <h2 class="title is-5">Another Experiment</h2>
+        <h2 class="title is-5"> </h2>
         <div class="content has-text-justified">
           <p>
-            Another challenging terrain where our method outperforms traditional approaches.
+            FR motors of the robot were heated up and became disabled. DreamFLEX effectively in the actual failure of the robot, not only in manually-triggered failure scenarios
           </p>
         </div>
       </div>
     </div>
+
+    <h2 class="title is-5 has-text-centered">Indoor Complex Environment</h2>
+    <!-- Second Row: Slope and Another Experiment -->
+    <div class="columns is-centered has-text-centered">
+      <!-- Experiment 3: Slope -->
+      <div class="column">
+        <video id="teaser" autoplay muted loop playsinline style="width: 100%; margin-top: 0;">
+          <source src="./static/videos/indoor_map.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Experiment 4: Another Experiment -->
+      <div class="column">
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/luDCAJcagPc?si=mnP_RBKnAcR3yAgy"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="title is-5 has-text-centered"> </h2>
+        <div class="content has-text-justified">
+          <p>
+            The indoor course consists of steps, bumps, and soft terrains. Especially, the deformable soft terrain was not included in the training simulations. Nevertheless, the robot successfully overcame the obstacles and maintained stable locomotion despite the faults in the rear leg joints. This result demonstrates DreamFLEX can adapt to out-of-distribution (OOD) states and maintain stable locomotion in these terrains.
+          </p>
+        </div>
+
   </div>
 </section>
 
