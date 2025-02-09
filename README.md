@@ -8,7 +8,7 @@ If you find Nerfies useful for your work please cite:
   author    = {Lee, Seunghyun and Nahrendra, I Made Aswin and Lee, Dongkyu and Yu, Byeongho and Oh, Minho and Myung, Hyun},
   title     = {{DreamFLEX}: Learning Fault-Aware Quadrupedal Locomotion Controller for Anomaly Situation in Rough Terrains},
   year      = {2025},
-  note      = {{ICRA 2025 Submitted}} 
+  note      = {{ICRA 2025 Accepted}} 
 }
 ```
 
